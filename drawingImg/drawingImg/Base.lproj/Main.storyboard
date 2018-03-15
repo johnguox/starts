@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="drawingImg" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gZe-lT-BSp"/>
+                        <viewControllerLayoutGuide type="bottom" id="kGk-F8-fTi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vm6-x7-Uk6">
+                                <rect key="frame" x="59" y="37" width="257" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="161" id="EGN-Bw-VOd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJN-ab-8CY">
+                                <rect key="frame" x="43" y="300" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="7J0-X0-x3K"/>
+                                    <constraint firstAttribute="height" constant="30" id="zYN-PK-kpH"/>
+                                </constraints>
+                                <state key="normal" title="原图"/>
+                                <connections>
+                                    <action selector="normalAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hUL-kE-ySu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpz-pC-3Gp">
+                                <rect key="frame" x="240" y="300" width="69" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="U2G-FO-mL1"/>
+                                    <constraint firstAttribute="height" constant="30" id="qUO-rB-Qij"/>
+                                </constraints>
+                                <state key="normal" title="合并图像"/>
+                                <connections>
+                                    <action selector="allActions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X7Z-5P-8Nt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2G8-Pg-Keu">
+                                <rect key="frame" x="147" y="300" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="QW7-J4-BSl"/>
+                                    <constraint firstAttribute="height" constant="30" id="hxg-6f-OG2"/>
+                                </constraints>
+                                <state key="normal" title="抠图"/>
+                                <connections>
+                                    <action selector="selectedAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5AR-z6-HJb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KJN-ab-8CY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="8Fv-cE-FZ1"/>
+                            <constraint firstItem="KJN-ab-8CY" firstAttribute="top" secondItem="Vm6-x7-Uk6" secondAttribute="bottom" constant="102" id="PAc-pi-W8B"/>
+                            <constraint firstItem="Jpz-pC-3Gp" firstAttribute="top" secondItem="Vm6-x7-Uk6" secondAttribute="bottom" constant="102" id="Pal-8a-EI2"/>
+                            <constraint firstItem="2G8-Pg-Keu" firstAttribute="leading" secondItem="KJN-ab-8CY" secondAttribute="trailing" constant="58" id="bcb-GV-ZlR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vm6-x7-Uk6" secondAttribute="trailing" constant="43" id="lMl-4b-bQr"/>
+                            <constraint firstItem="2G8-Pg-Keu" firstAttribute="top" secondItem="Vm6-x7-Uk6" secondAttribute="bottom" constant="102" id="lQ7-5e-tYD"/>
+                            <constraint firstItem="Jpz-pC-3Gp" firstAttribute="leading" secondItem="2G8-Pg-Keu" secondAttribute="trailing" constant="47" id="t9p-Lg-E2j"/>
+                            <constraint firstItem="Vm6-x7-Uk6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="43" id="w8t-DM-urL"/>
+                            <constraint firstItem="Vm6-x7-Uk6" firstAttribute="top" secondItem="gZe-lT-BSp" secondAttribute="bottom" constant="17" id="wqx-s3-bFc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="Vm6-x7-Uk6" id="7FZ-xm-IyY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="32.833583208395808"/>
+        </scene>
+    </scenes>
+</document>
