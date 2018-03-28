@@ -1,0 +1,20 @@
+PODS:
+  - MJRefresh (3.1.15.1)
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
+  - SnapKit (4.0.0)
+
+DEPENDENCIES:
+  - MJRefresh
+  - SDWebImage
+  - SnapKit
+
+SPEC CHECKSUMS:
+  MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+
+PODFILE CHECKSUM: de70a3bf4b7ab1e5917e6d28101f3e0cf30a25f1
+
+COCOAPODS: 1.1.1
