@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController,UIWebViewDelegate {
-
     lazy var webs:UIWebView = {
         let webs = UIWebView()
         webs.delegate = self
@@ -17,7 +16,6 @@ class ViewController: UIViewController,UIWebViewDelegate {
         return webs
     }()
     lazy var hea:UIView = {
-       
         let vi = UIView()
         vi.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 100)
         vi.backgroundColor = UIColor.red
@@ -26,17 +24,11 @@ class ViewController: UIViewController,UIWebViewDelegate {
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        /*
-         <p><img src="http://sys.hbylykt.com:80/static/upload/goodsDetail/20170817/1502982537400001930.jpg" title="1502982537400001930.jpg" alt="bobo凤梨.jpg"/></p><style> img{max-width: 100%;} </style>
-         */
-        
+        // Do any additional setup after loading the view, typically from a nib
         view.addSubview(hea)
         hea.addSubview(webs)
         let url = URL(string:"https://www.baidu.com")
         let req = URLRequest(url: url!)
-//        webs.loadHTMLString(stri, baseURL: nil)
         webs.loadRequest(req)
     }
     func webViewDidFinishLoad(_ webView: UIWebView) {
@@ -53,9 +45,6 @@ class ViewController: UIViewController,UIWebViewDelegate {
         let webSize = webView.sizeThatFits(CGSize.zero)
 //        let rect = webView.frame
         print(webSize.height)
-        
-        
-        
     }
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         print("加载失败！！！")
@@ -65,6 +54,7 @@ class ViewController: UIViewController,UIWebViewDelegate {
         
         return true
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
